@@ -1,3 +1,153 @@
+//Advanced arrays
+// var array = [1, 2, 10, 16];
+
+//forEach
+// const double = [];
+// const newArray = array.forEach((num) => {
+//     double.push(num * 2);
+// });
+// console.log(double);
+
+// map, filter, reduce
+
+//map
+// const mapArray = array.map((num) => {
+//     return num * 4; // you always have to return smth., that's how map works
+// });
+//
+// console.log(mapArray);
+// const mapArray = array.map(num => num * 4);//short syntaxis for only 1 parameter
+
+//filter
+// const filterArray = array.filter(num => {
+//     return num > 5;
+// });
+// console.log(filterArray);
+// const filterArray = array.filter(num => num > 5); //short filter
+// console.log(filterArray);
+
+//reduce
+// const reduceArray = array.reduce((accumulator, num) => {
+//     return accumulator + num;
+// }, 5);
+//
+// console.log(reduceArray);
+
+//--------HOMEWORK-------
+// Complete the below questions using this array:
+const array = [
+    {
+        username: "john",
+        team: "red",
+        score: 5,
+        items: ["ball", "book", "pen"]
+    },
+    {
+        username: "becky",
+        team: "blue",
+        score: 10,
+        items: ["tape", "backpack", "pen"]
+    },
+    {
+        username: "susy",
+        team: "red",
+        score: 55,
+        items: ["ball", "eraser", "pen"]
+    },
+    {
+        username: "tyson",
+        team: "green",
+        score: 1,
+        items: ["book", "pen"]
+    },
+
+];
+
+//Create an array using forEach that has all the usernames with a "!" to each of the usernames
+//es5
+// const arr = [];
+// const newArray = array.forEach(function (el) {
+//     arr.push(el.username + " !");
+// });
+// console.log(arr);
+//es6
+// const arr = [];
+// const newArray = array.forEach(el => {
+//     arr.push(`${el.username}!`);
+// });
+// console.log(arr);
+
+//Create an array using map that has all the usernames with a "? to each of the usernames
+//es5
+// const newMapArray = array.map(function(el) {
+// return el.username + "?"
+// });
+// console.log(newMapArray);
+//es6
+// const newMapArray = array.map(el =>  `${el.username}?`);
+// console.log(newMapArray);
+
+//Filter the array to only include users who are on team: red
+//es5
+// const filterArray = array.filter(function (el){
+// return el.team === "red"});
+// console.log(filterArray);
+//es6
+// const filterArray = array.filter(el => el.team === "red");
+// console.log(filterArray);
+
+//Find out the total score of all users using reduce
+//es5
+// var reduceArray = array.reduce(function (accumulator, el){
+//     return accumulator + el.score;}, 0);
+// console.log(reduceArray);
+//es6
+// const reduceArray = array.reduce((accumulator,el) => accumulator + el.score, 0);
+// console.log(reduceArray);
+
+// (1), what is the value of i?
+// (2), Make this map function pure:
+// const arrayNum = [1, 2, 4, 5, 8, 9];
+// const newArray = arrayNum.map((num, i) => {
+//     return num * 2;
+// });
+//
+// console.log(newArray);
+
+//es5
+// var finArray = array.map(function (el) {
+//     return {
+//        username: el.username + " ?",
+//        team: el.team + " ?",
+//        score: el.score + " ?",
+//        items: el.items + " ?",
+//     }
+// });
+// console.log(finArray);
+//es6
+// const finArray = array.map(el => {
+//     return {
+//        username: `${el.username}?`,
+//        team: `${el.team}?`,
+//        score: `${el.score}?`,
+//        items: `${el.items}?`
+//     }
+// });
+// console.log(finArray);
+
+
+
+
+
+
+
+
+//-------------TUTORIAL EXSERSICES-----------
+//  closures - a function ran. the function executed. It's never going to be run again.
+//  BUT it's going to remember that there are references to those variable
+//  so the child scope always has access to the parent scope
+//  children always have access to the parents scope, but parents never have access to the children's
+
 //ES8
 // const first = () => {
 //     const greet = "Hi";
@@ -9,11 +159,6 @@
 // };
 // const newFunc = first();
 // newFunc();
-
-//  closures - a function ran. the function executed. It's never going to be run again.
-//  BUT it's going to remember that there are references to those variable
-//  so the child scope always has access to the parent scope
-//  children always have access to the parents scope, but parents never have access to the children's
 
 //  currying is a function that takes multiple arguments one at a time.
 // const multiply = (a, b) => a * b;
@@ -53,6 +198,7 @@
 
 
 //es5 vs. es6
+
 
 // Object properties
 //es.5
