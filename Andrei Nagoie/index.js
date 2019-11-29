@@ -1,3 +1,57 @@
+//ES8
+// const first = () => {
+//     const greet = "Hi";
+//     const second = () => {
+//         const name = "Bobby";
+//         alert(greet);
+//     };
+//     return second;
+// };
+// const newFunc = first();
+// newFunc();
+
+//  closures - a function ran. the function executed. It's never going to be run again.
+//  BUT it's going to remember that there are references to those variable
+//  so the child scope always has access to the parent scope
+//  children always have access to the parents scope, but parents never have access to the children's
+
+//  currying is a function that takes multiple arguments one at a time.
+// const multiply = (a, b) => a * b;
+// const curriedMultiply = (a) => (b) => a * b;
+// curriedMultiply(3)(5);
+
+// //Currying: What does the last line return? - answer 31
+// const sum = (a, b) => a + b;
+// const curriedSum = (a) => (b) => a + b;
+// curriedSum(30)(1);
+
+// //Currying: What does the last line return? - answer 17
+// const sum = (a, b) => a + b;
+// const curriedSum = (a) => (b) => a + b;
+// const add5 = curriedSum(5);
+// add5(12);
+
+
+//Closure: What does the last line return? answer - 13
+// const addTo = x => y => x + y
+// var addToTen = addTo(10)
+// addToTen(3)
+
+//Compose
+// const compose = (f, g) => (a) => f(g(a));
+// const sum = (num) => num + 1;
+// compose(sum, sum)(5);
+
+//Composing: What does the last line return? - answer 16
+// const compose = (f, g) => (a) => f(g(a));
+// const add1 = (num) => num + 1;
+// const add5 = (num) => num + 5;
+// compose(add1, add5)(10);
+
+
+//Avoiding Side Effects, functional purity
+
+
 //es5 vs. es6
 
 // Object properties
@@ -61,7 +115,6 @@
 //es6
 //const isValidAge = (age = 10) => age;
 
-
 // Symbol
 // Create a symbol: "This is my first Symbol"
 // const symbol = Symbol('This is my first Symbol');
@@ -85,7 +138,6 @@
 // };
 //
 // console.log(whereAmI());
-
 
 //ternary
 // function isUserValid(bool) {
