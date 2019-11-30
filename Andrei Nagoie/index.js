@@ -1,15 +1,164 @@
+//es8
+//
+//adding padding
+// 'cat'.padStart(10);
+// 'cat'.padEnd(10);
+//
+//homework
+//
+// #1) Line up the Turtle and the Rabbit at the start line:
+// const startLine = '     ||<- Start line';
+// let turtle = '🐢';
+// let rabbit = '🐇';
+//
+// console.log(startLine);
+// console.log('🐢'.padStart(7));
+// console.log('🐇'.padStart(7));
+//
+// #2) What happens when you run turtle.trim().padEnd(9, '=') on the turtle variable
+// Read about what the second parameter does in padEnd and padStart
+// turtle = turtle.trim().padEnd(9, '=');//trim removes whitespace
+//
+//vertical expression
+// const fun = (a,
+//              b,
+//              c,
+//              d) => {
+//     console.log(a)
+// };
+// fun(1,2,3,4);
+//
+//Object.values         - shows objects' properties' values
+//Object.entries        - shows more details of the object
+//Object.keys           - allows us to use an object as an array
+//
+// let obj = {
+//     username: 'Santa',
+//     username2: 'Rudi',
+//     username3: 'Grinch'
+// };
+// Object.keys(obj).forEach((key, index) => {
+//     console.log(key, obj[key]);
+// });
+// Object.values(obj).forEach(value => {
+//     console.log(value);
+// });
+// Object.entries(obj).forEach(value => {
+//     console.log(value);
+// });
+// Object.entries(obj).map(value => {
+// return  value[1] + value[0].replace('username', '');
+// });
+//
+//homework
+// #3) Get the below object to go from:
+// let obj = {
+//     my: 'name',
+//     is: 'Rudolf',
+//     the: 'raindeer'
+// };
+// // to this:
+// 'my name is Rudolf the raindeer'
+//
+//solution
+//
+// let obj = {
+//     my: 'name',
+//     is: 'Rudolf',
+//     the: 'raindeer'
+// };
+// Object.entries(obj).map(value => value.join(" ")).join(" ");
+//Async Await
+
+
+
+
+//es7
+//
+// const pets = ['cat', 'dog', 'bird'];
+// pets.includes('cat');
+//
+// const square = (x) => x**2;
+// console.log(square(8));
+//
+//homework
+//
+// #1) Check if this array includes the name "John".
+// const dragons = ['Tim', 'Johnathan', 'Sandy', 'Sarah'];
+// dragons.includes("John");
+//
+// #2) Check if this array includes any name that has "John" inside of it. If it does, return that
+// name or names in an array.
+// const dragons = ['Tim', 'Johnathan', 'Sandy', 'Sarah'];
+// dragons.filter(name => name.includes("John"));// ['Johnathan']
+//
+// #3) Create a function that calulates the power of 100 of a number entered as a parameter
+// const hundred = (x) => x**100;
+// console.log(hundred(2));
+//
+// #4) Useing your function from #3, put in the paramter 10000. What is the result?
+// Research for yourself why you get this result
+// const hundred = (x) => x**10000;
+// console.log(hundred(2));
+
+
+//BY REFERENCE OR BY VALUE
+//
+//primitives are passed by value
+//objects are passed by reference
+// var a = 5;
+// var b = a;
+// b++;
+// console.log(b);
+// console.log(a);
+//
+// let obj1 = {
+//     name: "Yao",
+//     password: "123"
+// };
+// let obj2 = obj1;
+//
+// obj2.password = "easypeasy";
+// console.log(obj1);
+// console.log(obj2);
+//
+// var c = [1,2,3,4,5];
+// var d = [].concat(c);//to make a copy
+// d.push(7890);
+// console.log("c "+ c);
+// console.log("d " + d);
+//
+// let obj = {a: "a", b: "b", c: {deep: "try and copy me"}};
+// let clone = Object.assign({}, obj);//clone an object
+// let clone2 = {...obj};
+// let superClone = JSON.parse(JSON.stringify(obj));// c will  not be affected
+//
+// obj.c.deep = 8;//clone & clone2 are not affected, only obj is affected
+// console.log(obj);
+// console.log(clone);
+// console.log(clone2);
+// console.log(superClone);
+//
+//homework
+//#2 what is the value of property a for each object.
+// const object1 = { a: 5 }; //4
+// const object2 = object1; //4
+// const object3 = object2; //4
+// const object4 = { a: 5}; //5
+// object1.a = 4;//4
+
 //Advanced arrays
 // var array = [1, 2, 10, 16];
-
+//
 //forEach
 // const double = [];
 // const newArray = array.forEach((num) => {
 //     double.push(num * 2);
 // });
 // console.log(double);
-
+//
 // map, filter, reduce
-
+//
 //map
 // const mapArray = array.map((num) => {
 //     return num * 4; // you always have to return smth., that's how map works
@@ -17,7 +166,7 @@
 //
 // console.log(mapArray);
 // const mapArray = array.map(num => num * 4);//short syntaxis for only 1 parameter
-
+//
 //filter
 // const filterArray = array.filter(num => {
 //     return num > 5;
@@ -25,44 +174,44 @@
 // console.log(filterArray);
 // const filterArray = array.filter(num => num > 5); //short filter
 // console.log(filterArray);
-
+//
 //reduce
 // const reduceArray = array.reduce((accumulator, num) => {
 //     return accumulator + num;
 // }, 5);
 //
 // console.log(reduceArray);
-
+//
 //--------HOMEWORK-------
 // Complete the below questions using this array:
-const array = [
-    {
-        username: "john",
-        team: "red",
-        score: 5,
-        items: ["ball", "book", "pen"]
-    },
-    {
-        username: "becky",
-        team: "blue",
-        score: 10,
-        items: ["tape", "backpack", "pen"]
-    },
-    {
-        username: "susy",
-        team: "red",
-        score: 55,
-        items: ["ball", "eraser", "pen"]
-    },
-    {
-        username: "tyson",
-        team: "green",
-        score: 1,
-        items: ["book", "pen"]
-    },
-
-];
-
+// const array = [
+//     {
+//         username: "john",
+//         team: "red",
+//         score: 5,
+//         items: ["ball", "book", "pen"]
+//     },
+//     {
+//         username: "becky",
+//         team: "blue",
+//         score: 10,
+//         items: ["tape", "backpack", "pen"]
+//     },
+//     {
+//         username: "susy",
+//         team: "red",
+//         score: 55,
+//         items: ["ball", "eraser", "pen"]
+//     },
+//     {
+//         username: "tyson",
+//         team: "green",
+//         score: 1,
+//         items: ["book", "pen"]
+//     },
+//
+// ];
+//
 //Create an array using forEach that has all the usernames with a "!" to each of the usernames
 //es5
 // const arr = [];
@@ -76,7 +225,7 @@ const array = [
 //     arr.push(`${el.username}!`);
 // });
 // console.log(arr);
-
+//
 //Create an array using map that has all the usernames with a "? to each of the usernames
 //es5
 // const newMapArray = array.map(function(el) {
@@ -86,7 +235,7 @@ const array = [
 //es6
 // const newMapArray = array.map(el =>  `${el.username}?`);
 // console.log(newMapArray);
-
+//
 //Filter the array to only include users who are on team: red
 //es5
 // const filterArray = array.filter(function (el){
@@ -95,7 +244,7 @@ const array = [
 //es6
 // const filterArray = array.filter(el => el.team === "red");
 // console.log(filterArray);
-
+//
 //Find out the total score of all users using reduce
 //es5
 // var reduceArray = array.reduce(function (accumulator, el){
@@ -104,7 +253,7 @@ const array = [
 //es6
 // const reduceArray = array.reduce((accumulator,el) => accumulator + el.score, 0);
 // console.log(reduceArray);
-
+//
 // (1), what is the value of i?
 // (2), Make this map function pure:
 // const arrayNum = [1, 2, 4, 5, 8, 9];
@@ -113,7 +262,7 @@ const array = [
 // });
 //
 // console.log(newArray);
-
+//
 //es5
 // var finArray = array.map(function (el) {
 //     return {
@@ -135,11 +284,68 @@ const array = [
 // });
 // console.log(finArray);
 
-
-
-
-
-
+//Advanced objects
+//
+//reference type
+// var object1 = {value: 10};
+// var object2 = object1;
+// var object3 = {value: 10};
+//
+// context
+// const object4 = {
+//     a: function () {
+//         console.log(this)
+//     }
+// };
+//
+// instantiation(!!!!)
+//making multiple copies of an object
+// class Player {
+//     constructor(name, type){
+//         this.name = name;
+//         this.type = type;
+//     }
+//     introduce() {
+//         console.log(`Hi, I'm ${this.name}, I'm a ${this.type}`);
+//     }
+// }
+//
+// class Wizard extends Player {
+//     constructor(name, type){
+//         super(name, type);//use super(<shows what you want to add>) whenever you want to extend a class
+//     }
+//     play(){
+//         console.log(`Eweeeeeeee I'm a ${this.type}`);
+//     }
+// }
+// const wizard1 = new Wizard("Shelly", "Healer");
+// const wizard2 = new Wizard("Bob", "Magic");
+//
+//homework
+//
+//#3 create two classes: an Animal class and a Mamal class.
+// create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color.
+//
+// class Animal {
+//     constructor(name, type, color) {
+//         this.name = name;
+//         this.type = type;
+//         this.color = color;
+//     }
+// }
+//
+// class Mamal extends Animal {
+//     constructor(name, type, color) {
+//         super(name, type, color)
+//     }
+//
+//     sound() {
+//         console.log(`moooo, my name is ${this.name}, I belong to ${this.type} and I'm perfectly ${this.color}`);
+//     }
+// }
+//
+// var cow = new Mamal("Elisa", "beauty", "white");
+// cow.sound();
 
 
 //-------------TUTORIAL EXSERSICES-----------
@@ -160,16 +366,17 @@ const array = [
 // const newFunc = first();
 // newFunc();
 
-//  currying is a function that takes multiple arguments one at a time.
+//  currying
+//  is a function that takes multiple arguments one at a time.
 // const multiply = (a, b) => a * b;
 // const curriedMultiply = (a) => (b) => a * b;
 // curriedMultiply(3)(5);
-
+//
 // //Currying: What does the last line return? - answer 31
 // const sum = (a, b) => a + b;
 // const curriedSum = (a) => (b) => a + b;
 // curriedSum(30)(1);
-
+//
 // //Currying: What does the last line return? - answer 17
 // const sum = (a, b) => a + b;
 // const curriedSum = (a) => (b) => a + b;
@@ -186,19 +393,12 @@ const array = [
 // const compose = (f, g) => (a) => f(g(a));
 // const sum = (num) => num + 1;
 // compose(sum, sum)(5);
-
+//
 //Composing: What does the last line return? - answer 16
 // const compose = (f, g) => (a) => f(g(a));
 // const add1 = (num) => num + 1;
 // const add5 = (num) => num + 5;
 // compose(add1, add5)(10);
-
-
-//Avoiding Side Effects, functional purity
-
-
-//es5 vs. es6
-
 
 // Object properties
 //es.5
