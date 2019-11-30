@@ -50,12 +50,45 @@
 //
 
 //reduce
+//The reduce() method is used to apply a function to each
+// element in the array to reduce the array to a single value.
+//
+// accumulator — the accumulator accumulates all of the callbacks
+// returned values.
+//let sum = arr.reduce((acc, val) => acc + val, 100);
 // const reduceArray = array.reduce((accumulator, num) => {
 //     return accumulator + num;
 // }, 5);
 //
 // console.log(reduceArray);
 //
+//
+//example
+//Using the reduce() method,
+// how would you sum up the population of every country except China?
+// let data = [
+//     {
+//         country: 'China',
+//         pop: 1409517397,
+//     },
+//     {
+//         country: 'India',
+//         pop: 1339180127,
+//     },
+//     {
+//         country: 'USA',
+//         pop: 324459463,
+//     },
+//     {
+//         country: 'Indonesia',
+//         pop: 263991379,
+//     }
+// ];
+// let sum = data.reduce((acc, val) => {
+//     return val.country === 'China' ? acc : acc + val.pop;
+// }, 0);
+//
+// console.log(sum);
 
 //--------HOMEWORK-------
 // Complete the below questions using this array:

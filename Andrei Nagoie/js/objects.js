@@ -59,6 +59,7 @@
 //     eyeColor: "blue"
 // };
 // const {firstName, lastName, age, eyeColor} = person;
+
 //Advanced objects
 
 //reference type

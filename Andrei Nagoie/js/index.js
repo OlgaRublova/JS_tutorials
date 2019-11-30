@@ -239,10 +239,6 @@
 // const object4 = { a: 5}; //5
 // object1.a = 4;//4
 
-
-
-
-
 // Template strings
 //es5
 // var message = "Hello " + firstName + " have I met you before? I think we met in " + city + " last summer no???";
@@ -293,6 +289,12 @@
 // var answer = isUserValid(true) ? "You may enter" : "Access denied";
 // var automatedAnswer = "Your account # is " + ( isUserValid(false) ? "1234" : "Not available");
 
+//setTimeout
+// console.log('1');
+// setTimeout(() => {
+//     console.log('2');
+// }, 2000);
+// console.log("3");
 
 
 
