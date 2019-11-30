@@ -58,7 +58,7 @@
 // console.log(newGreeting1);
 //or
 //console.log(greeting.flatMap(x => x.join(' ')).join(' '))
-
+//
 //
 //#4 Turn the trapped 3 number into: [3]
 // const trapped = [[[[[[[[[[[[[[[[[[[[[[[[[[3]]]]]]]]]]]]]]]]]]]]]]]]]];
@@ -575,69 +575,11 @@
 // var answer = isUserValid(true) ? "You may enter" : "Access denied";
 // var automatedAnswer = "Your account # is " + ( isUserValid(false) ? "1234" : "Not available");
 
-//switch
-// function moveCommand(direction) {
-//     var whatHappens;
-//     switch (direction) {
-//         case "forward":
-//             whatHappens = "you encounter a monster";
-//             break;
-//         case "back":
-//             whatHappens = "you encounter a fox";
-//             break;
-//         case "left":
-//             whatHappens = "you encounter a cat";
-//             break;
-//         case "right":
-//             whatHappens = "you encounter a dog";
-//             break;
-//         default:
-//             whatHappens = "please enter a valid direction"
-//     }
-//     return whatHappens;
-// }
-// function whomRosaLoves(husband) {
-//     var possibleHusband;
-//
-//     switch (husband) {
-//         case "ernesto":
-//             possibleHusband = "friend - Ernesto";
-//             break;
-//         case "brother":
-//             possibleHusband = "brother-in-law - Rogelio";
-//             break;
-//         case "love":
-//             possibleHusband = "love of her life - Ricardo";
-//             break;
-//         default:
-//             possibleHusband = "She stays alone with cats";
-//     }
-//     return possibleHusband;
-// }
 
-//-----loops-----
-// var todos = [
-//     "clean room",
-//     "brush teeth",
-//     "exersise",
-//     "study js"
-// ];
-//
-// function logTodos(el, i) {
-//     console.log(el, i)
-// }
-// todos.forEach(logTodos);
-//
-// console.log("----------------");
-//
-// for (var i=0; i <todos.length; i++){
-//     console.log(todos[i], i)
-// }
-// var countOne = 10;
-// while (countOne > 4){
-//     console.log("while", countOne);
-//     countOne--;
-// }
+
+
+
+
 
 //-----facebook-----
 // var database = [
