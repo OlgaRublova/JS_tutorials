@@ -46,8 +46,6 @@
 // console.log(multiplyByTen(3));
 
 
-
-
 //CLOSURES - lexical scoping
 //A closure can not only access the variables defined in its outer function
 // but also the arguments of the outer function.
@@ -151,5 +149,89 @@
 // }
 
 
-
 //PROTOTYPES
+
+//inheritance by bind method
+// let dragon = {
+//     name: "Tanya",
+//     fire: true,
+//     fight() {
+//         return 5
+//     },
+//     sing() {
+//         if (this.fire) {
+//             return `I am ${this.name}, the breather of fire`
+//         }
+//     }
+// };
+//
+// let lizard = {
+//     name: "Kite",
+//     fight() {
+//         return 1
+//     },
+// };
+//
+// const singLizard = dragon.sing.bind(lizard);
+// console.log(singLizard());
+
+//inheritance by proto
+// lizard.__proto____ = dragon;//we should never use this syntax
+// lizard.fight();
+//
+//
+// lizard.__proto__= dragon;
+// for (let prop in lizard){
+//     if (lizard.hasOwnProperty(prop)){
+//         console.log(prop);
+//     }
+// }
+
+// inheritance by prototype-----------
+//Only functions have a prototype property and it references to an object,
+// used to attach properties that will be inherited by objects for further down
+//the prototype chain. The last object in the chain is this built-in Object.prototype
+//Objects ia a function because it has a prototype. Object.prototype is a base object
+
+//Object.create()
+// let human = {
+//   mortal: true
+// };
+// let socrates = Object.create(human);
+// socrates.age = 45;
+// console.log(socrates.age);
+// console.log(human.isPrototypeOf(socrates));
+
+//rules
+// cost obj = {};//undefined
+// obj.prototype// undefined
+//
+// arr = []; //undefined
+// arr.prototype; //undefined
+//
+//'string'.prototype  //undefined
+//String.prototype // works
+
+//exercise 1
+// Date.prototype.lastYear = function() {
+//     return this.getFullYear() - 1;
+// };
+//
+// new Date().lastYear();
+
+//exercise 2
+// Array.prototype.map = function(){
+//     let arr = [];
+//     for( let i =0; i < this.length; i++ ){
+//         arr.push((this[i] + ""));
+//     }
+//     return arr;
+// };
+
+//exercise 3
+// Function.prototype.bind = function(whoIsCallingMe){
+//     const self = this;
+//     return function(){
+//         return self.apply(whoIsCallingMe, arguments);
+//     };
+// }
