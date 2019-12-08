@@ -148,6 +148,81 @@
 //     }) (i);
 // }
 
+//CLOSURES - MY EXAMPLES
+
+//EX. 1
+// function person() {
+//     let name = 'Peter';
+//
+//     return function displayName() {
+//         console.log(name);
+//     };
+// }
+// let peter = person();
+// peter(); // prints 'Peter'
+
+//EX. 2
+// function getCounter() {
+//     let counter = 0;
+//     return function() {
+//         return counter++;
+//     }
+// }
+// let count = getCounter();
+// console.log(count());  // 0
+// console.log(count());  // 1
+// console.log(count());  // 2
+
+//EX. 3
+// let name = "John";
+//
+// function sayHi() {
+//     alert("Hi, " + name);
+// }
+//
+// name = "Pete";
+// sayHi(); // "Pete"
+
+//EX. 4
+// function makeWorker() {
+//     let name = "Pete";
+//
+//     return function() {
+//         alert(name);
+//     };
+// }
+//
+// let name = "John";
+//
+// // create a function
+// let work = makeWorker();
+//
+// // call it
+// work();//"Pete"
+
+// EX. 5
+// function initializeData() {
+//     var myVar = 1;
+//     return {
+//         getVar: function() {
+//             return myVar;
+//         },
+//         setVar: function(v) {
+//             myVar = v;
+//         }
+//     };
+// }
+//
+// obj = initializeData();
+//
+// console.log(obj.getVar()); // 1
+//
+// obj.setVar(2);
+// console.log(obj.getVar()); // 2
+//
+// obj.setVar("string");
+// console.log(obj.getVar()); // string
+
 
 //PROTOTYPES
 
@@ -235,3 +310,30 @@
 //         return self.apply(whoIsCallingMe, arguments);
 //     };
 // }
+
+//CONSTRUCTOR FUNCTIONS
+//only functions have access to prototypes
+// function Elf(name, weapon) {
+//     this.name = name;
+//     this.weapon = weapon;
+// }
+//
+// Elf.prototype.attack = function () { // we should not use lexical scoped arrow functions
+//     return this.name + " attacks with " + this.weapon
+// };
+//
+// Elf.prototype.build = function () {
+//     const self = this;
+//     function building() {
+//         return self.name + " builds a house";
+//     }
+//     return building();
+// };
+//
+// const elf1 = new Elf("Frodo", "fire");
+// const elf2 = new Elf("Freddy", "sword");
+//
+// console.log(elf1.attack());
+// console.log(elf1.build());
+// console.log(elf2.attack());
+// console.log(elf2.build());

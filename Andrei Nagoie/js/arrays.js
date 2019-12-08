@@ -27,9 +27,6 @@
 //     double.push(num * 2);
 // });
 // console.log(double);
-//
-// map, filter, reduce
-//
 
 //map
 // const mapArray = array.map((num) => {
