@@ -337,3 +337,89 @@
 // console.log(elf1.build());
 // console.log(elf2.attack());
 // console.log(elf2.build());
+
+// OBJECT.CREATE()
+
+// var superHuman = {
+//     usePower: function () {
+//         console.log(this.superPower + "!");
+//     }
+// };
+//
+// var banshee = Object.create(superHuman, {
+//     name: { value: "Silver Banshee" },
+//     superPower: { value: "sonic wail" }
+// });
+//
+// banshee.usePower(); // Outputs: "sonic wail!"
+
+// var superHero = Object.create(superHuman, {
+//     allegiance: { value: "Good" },
+//     saveTheDay: {
+//         value: function () {
+//             console.log(this.name + " saved the day!");
+//         }
+//     }
+// });
+//
+// var marvel = Object.create(superHero, {
+//     name: { value: "Captain Marvel" },
+//     superPower: { value: "magic" }
+// });
+//
+// // Outputs: "Captain Marvel saved the day!"
+// marvel.saveTheDay();
+
+
+//ES 6 CLASSES
+// class Elf {
+//     constructor(name, weapon) {
+//         this.name = name;
+//         this.weapon = weapon;
+//     }
+//     attack() {
+//         return this.name + " attacks with " + this.weapon
+//     }
+// }
+//
+// const elf1 = new Elf("Frodo", "fire");
+// const elf2 = new Elf("Freddy", "sword");
+//
+// console.log(elf1.attack());
+// console.log(elf2.attack());
+
+// class Character {
+//     constructor(name, weapon) {
+//         this.name = name;
+//         this.weapon = weapon;
+//     }
+//
+//     attack() {
+//         return this.name + " attacks with " + this.weapon
+//     }
+// }
+//
+// class Elf extends Character {
+//     constructor(name, weapon, type) {
+//         super(name, weapon); // must always be inside the constructor
+//         this.type = type;
+//     }
+// }
+//
+// class Ogre extends Character {
+//     constructor(name, weapon, color) {
+//         super(name, weapon);
+//         this.color = color;
+//     }
+//
+//     makeFort() {
+//         return this.name + " builds the strongest fort in the world made";
+//     }
+// }
+//
+// const fiona = new Elf("Fiona", "a karate star", "house");
+// console.log(fiona.attack());
+//
+//
+// const shrek = new Ogre("Shrek", "club", "green");
+// console.log(shrek.makeFort());
